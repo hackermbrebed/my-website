@@ -1,1 +1,41 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Direktori Kustom</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+        .navbar { background-color: #333; padding: 1em; display: flex; justify-content: space-between; align-items: center; }
+        .navbar a { color: white; text-decoration: none; padding: 0.5em 1em; }
+        .navbar a:hover { background-color: #575757; border-radius: 4px; }
+        .navbar-brand { font-size: 1.5em; font-weight: bold; }
+        .navbar-nav { display: flex; gap: 1em; } /* Memberi jarak antar tombol */
+        .container { max-width: 960px; margin: 2em auto; padding: 1em; background-color: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #007bff; }
+        footer { text-align: center; padding: 1em; margin-top: 2em; background-color: #eee; color: #555; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <a href="/">My Website Directory</a>
+        </div>
+        <div class="navbar-nav">
+            <a href="#">Tombol 1</a>
+            <a href="#">Tombol 2</a>
+            <a href="#">Tombol 3</a>
+            <a href="#">Tombol 4</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+        <p>&copy; 2023 My Website Directory. All rights reserved.</p>
+    </footer>
+</body>
+</html>
